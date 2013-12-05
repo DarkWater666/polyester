@@ -1,0 +1,18 @@
+= form_for @mebel do |f|
+  - if @mebel.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@mebel.errors.count, "error")} prohibited this mebel from being saved:"
+      ul
+        - @mebel.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :text
+    = f.text_area :text
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :autor
+    = f.text_field :autor
+  .actions = f.submit 'Save'

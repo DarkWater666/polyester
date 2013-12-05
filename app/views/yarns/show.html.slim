@@ -1,0 +1,11 @@
+p#notice = notice
+
+h2.title.news
+  = @yarn.title
+.para-news
+  = @yarn.text.html_safe
+
+/= link_to 'Edit', edit_news_path(@news)
+.more
+  = link_to '<< Назад', yarns_path
+

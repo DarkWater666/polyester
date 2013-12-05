@@ -1,0 +1,10 @@
+p#notice = notice
+
+h2.title.news
+  = @mebel.title
+.para-news
+  = @mebel.text.html_safe
+
+/= link_to 'Edit', edit_news_path(@news)
+.more
+  = link_to '<< Назад', mebels_path

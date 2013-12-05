@@ -1,0 +1,10 @@
+p#notice = notice
+
+h2.title.news
+  = @news.title
+.para-news
+  = raw @news.text
+
+/= link_to 'Edit', edit_news_path(@news)
+.more
+  = link_to '<< Назад', news_index_path

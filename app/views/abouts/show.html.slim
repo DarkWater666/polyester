@@ -1,0 +1,9 @@
+p#notice = notice
+
+p
+  strong Text:
+  = @about.text
+
+= link_to 'Edit', edit_about_path(@about)
+'|
+= link_to 'Back', abouts_path

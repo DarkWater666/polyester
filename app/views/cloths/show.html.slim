@@ -1,0 +1,10 @@
+p#notice = notice
+
+h2.title.news
+  = @cloth.title
+.para-news
+  = @cloth.text.html_safe
+
+/= link_to 'Edit', edit_news_path(@news)
+.more
+  = link_to '<< Назад', cloths_path

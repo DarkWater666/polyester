@@ -1,0 +1,9 @@
+# MySQL version 2.x
+development:
+  adapter: mysql2
+  encoding: utf8
+  database: polyDB
+  user: root
+  password: "555"
+  pool: 5
+  timeout: 5000

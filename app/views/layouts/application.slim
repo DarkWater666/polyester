@@ -1,0 +1,41 @@
+DOCTYPE html
+html
+head
+  title Тверской полиэфир
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+  = stylesheet_link_tag    'polyester', media: 'all', 'data-turbolinks-track' => true
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  = javascript_include_tag 'system', 'data-turbolinks-track' => true
+  = csrf_meta_tags
+body
+p.notice
+  = notice
+p.alert
+  = alert
+#main-site
+  #header-site
+    .left-site
+    .right-site
+      .logo-site
+        a href='/' title='На главную'
+          .logolink
+      .menu-site
+        = render 'layouts/links.slim'
+  #body-site
+    .leftbar
+      = render 'layouts/links.slim'
+      ul.docs
+        li
+          = link_to 'Раскрытие информации эмитентом', '#', :class => 'link_docs'
+    .mainwin
+      .topsqw
+      .article
+        = yield
+      .botsqw
+  #footer-site
+    .foot-left
+    .foot-right
+      .foot-menu
+        = render 'layouts/links.slim'
+      .foot-splash
+

@@ -1,0 +1,12 @@
+h1.head Новости
+
+- @news.each do |news|
+  .art-cle
+    h2.title
+      = news.title
+    .para
+      = truncate_html news.text, length: 250, omission: '...'
+    .more
+      = link_to 'Далее >>', news_path(news)
+
+
